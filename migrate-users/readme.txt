@@ -7,11 +7,11 @@ Tested up to: 4.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 
-Migrate Users helps to migrate users from any system to your Wordpress website.
+Migrate Users helps to migrate users from any system to your Wordpress website in few clicks
 
 == Description ==
 
-Migrate Users helps to migrate users from any system to your Wordpress website.
+Migrate Users helps to migrate users from any system to your Wordpress website in few clicks
 
 Features:
 - import file format is .csv
@@ -20,8 +20,9 @@ Features:
 - log for the whole import process
 - simply adding and setting user meta fields
 - automatically send a link to reset password
+- configure it in 10 minutes and all your users will be migrated in few clicks!
 
-Support and suggestions, [Support](http://v1rus.ru/database-backups-wordpress/)
+Support and suggestions, [Support](https://v1rus.ru/)
 skype: agriboed
 
 = Languages =

@@ -655,7 +655,7 @@ class MigrateUsers
         $data['file_exists'] = $this->file_exists;
         $data['upload_file_name'] = static::$upload_file_name;
         $data['options'] = [
-            'delimiter' => $this->getOption('delimiter', ''),
+            'delimiter' => $this->getOption('delimiter', ','),
             'update' => $this->getOption('update', false),
             'reset' => $this->getOption('reset', false),
             'first_line' => $this->getOption('first_line', false),
@@ -666,14 +666,13 @@ class MigrateUsers
 
         $data['fields'] = $this->getFields();
         $data['user_fields'] = $this->getUserFields();
-
         $data['defaults'] = [
             'text' => $this->getDefaultsText(),
             'file' => $this->getDefaultsFile(),
             'custom' => $this->getDefaultsCustom(),
         ];
-
         $data['table'] = $this->table;
+
         include __DIR__ . '/templates/options.php';
     }
 }
