@@ -8,3 +8,6 @@ Plugin helps to migrate users from any system to your Wordpress website in few c
 2. Activate the plugin through the Plugins menu in WordPress. After activation, go to the menu "Tools" - "Migrate Users"
 3. Configure the plugin
 4. Enjoy!
+
+**More information on Wordpress official website**
+[https://wordpress.org/plugins/migrate-users/]
