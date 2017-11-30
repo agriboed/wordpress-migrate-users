@@ -44,13 +44,12 @@ class Table extends \WP_List_Table
         parent::__construct(array(
             'singular' => 'import',
             'plural' => 'import',
-            'ajax' => false
+            'ajax' => false,
         ));
-
     }
 
     /**
-     * @param object $item
+     * @param $item
      * @param string $column_name
      * @return string
      */

@@ -29,6 +29,26 @@ class MigrateUsers
     protected static $filename = 'migrate_users.csv';
 
     /**
+     * @var string
+     */
+    protected static $basename;
+
+    /**
+     * @var string
+     */
+    protected static $plugin_dir;
+
+    /**
+     * @var string
+     */
+    protected static $plugin_dir_url;
+
+    /**
+     * @var
+     */
+    protected static $wp_upload_dir;
+
+    /**
      * @var bool
      */
     protected $file_exists;
@@ -60,16 +80,27 @@ class MigrateUsers
 
     /**
      * MigrateUsers constructor.
+     *
+     * @param $plugin
      */
-    public function __construct()
+    public function __construct($plugin)
     {
+        static::$basename = basename($plugin);
+        static::$plugin_dir = plugin_dir_path($plugin);
+        static::$plugin_dir_url = plugin_dir_url($plugin);
+        static::$wp_upload_dir = wp_upload_dir();
+
+        add_action('admin_enqueue_scripts', function () {
+            wp_register_style(static::$key, static::$plugin_dir_url . '/assets/css/styles.css');
+        });
+        add_action('plugins_loaded', function () {
+            load_plugin_textdomain(static::$key, false, static::$plugin_dir . '/languages/');
+        });
         add_action('admin_menu', function () {
             add_submenu_page('tools.php', __('Migrate Users', static::$key), __('Migrate Users', static::$key),
                 'manage_options', static::$key,
                 array($this, 'init'));
         });
-
-        $this->wp_upload_dir = wp_upload_dir();
     }
 
     /**
@@ -117,7 +148,7 @@ class MigrateUsers
      */
     public function init()
     {
-        wp_enqueue_style(static::$key, plugins_url('assets/css/styles.css', __FILE__));
+        wp_enqueue_style(static::$key);
 
         $this->logger = new Logger($this);
         $this->table = new Table($this);
@@ -584,7 +615,7 @@ class MigrateUsers
      */
     protected function getDirPath()
     {
-        return $this->wp_upload_dir['basedir'] . '/' . static::$upload_dir . '/';
+        return static::$wp_upload_dir['basedir'] . '/' . static::$upload_dir . '/';
     }
 
     /**
@@ -673,6 +704,6 @@ class MigrateUsers
         ];
         $data['table'] = $this->table;
 
-        include __DIR__ . '/templates/options.php';
+        include static::$plugin_dir . '/templates/options.php';
     }
 }

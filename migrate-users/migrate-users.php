@@ -2,7 +2,7 @@
 /*
 Plugin Name: Migrate Users
 Description: Plugins provides support to migrate users from CSV to Wordpress
-Version: 1.0.0
+Version: 1.0.1
 Author: AGriboed
 Author URI: https://v1rus.ru/
 */
@@ -17,4 +17,4 @@ include __DIR__ . '/src/MigrateUsers.php';
 include __DIR__ . '/src/Table.php';
 include __DIR__ . '/src/Logger.php';
 
-new \MigrateUsers\MigrateUsers;
+new \MigrateUsers\MigrateUsers(__FILE__);

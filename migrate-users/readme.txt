@@ -3,8 +3,8 @@ Contributors: AGriboed
 Donate link: https://v1rus.ru
 Tags: migrate, import, users import, move users, create users
 Requires at least: 4.8
-Tested up to: 4.9
-Stable tag: 1.0.0
+Tested up to: 4.9.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 Migrate Users helps to migrate users from any system to your Wordpress website in few clicks
