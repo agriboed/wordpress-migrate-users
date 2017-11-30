@@ -22,6 +22,8 @@ Features:
 - automatically send a link to reset password
 - configure it in 10 minutes and all your users will be migrated in few clicks!
 
+[Contribute on GitHub](https://github.com/agriboed/wordpress-migrate-users)
+
 Support and suggestions, [Support](https://v1rus.ru/)
 skype: agriboed
 
@@ -35,9 +37,16 @@ skype: agriboed
 4. Enjoy!
 
 == Screenshots ==
-1. Settings
+1. Step 1
+2. Step 2
+3. Step 3
+4. Result
+
 
 == Changelog ==
+
+= 1.0.1 =
+* Bug fixes
 
 = 1.0.0 =
 * Release

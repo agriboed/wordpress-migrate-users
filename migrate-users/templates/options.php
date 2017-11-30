@@ -267,26 +267,30 @@
 
             default:
                 ?>
-                <h1>Few steps to import your users into Wordpress CMS:</h1>
+                <h1><?php _e('Few steps to import your users into Wordpress CMS:', $data['key']); ?></h1>
 
-                <h3>1) Upload .csv file with your users data.</h3>
-                <p>It's can be export from another CMS or export from MySQL database etc.</p>
+                <h3><?php _e('1) Upload .csv file with your users data.', $data['key']); ?></h3>
+                <p><?php _e('It\'s can be export from another CMS or export from MySQL database etc.',
+                        $data['key']); ?></p>
 
-                <h3>2) Configure your import to detect all fields and set mapping.</h3>
-                <p>Note: the password field should be non encrypted.</p>
-                <p>Note: be careful with mapping. If you not sure what field have responsible into CMS -
-                    do not import it.
+                <h3><?php _e('2) Configure your import to detect all fields and set mapping.', $data['key']); ?></h3>
+                <p><?php _e('Note: the password field should be non encrypted.', $data['key']); ?></p>
+                <p><?php _e('Note: be careful with mapping. If you not sure what field have responsible into CMS -
+                    do not import it.', $data['key']); ?>
                 </p>
-                <h3>3) See the sample table and check twice all data. Start importing.</h3>
-                <p>Note: use bulk actions and see status column in the each line after import.</p>
+                <h3><?php _e('3) See the sample table and check twice all data. Start importing.',
+                        $data['key']); ?></h3>
+                <p><?php _e('Note: use bulk actions and see status column in the each line after import.',
+                        $data['key']); ?></p>
 
-                <h3>4) Delete the import file</h3>
-                <p>Note: import file will be deleted and history of statuses will be lost.</p>
+                <h3><?php _e('4) Delete the import file', $data['key']); ?></h3>
+                <p><?php _e('Note: import file will be deleted and history of statuses will be lost.',
+                        $data['key']); ?></p>
 
-                <h2>Be careful!</h2>
-                <p>Strongly recommend you to create a backup of your database using our tool
+                <h2><?php _e('Be careful!', $data['key']); ?></h2>
+                <p><?php _e('Strongly recommend you to create a backup of your database using our tool
                     <a href="https://wordpress.org/plugins/database-backups/" target="_blank">Database
-                        Backups</a></p>
+                        Backups</a>', $data['key']); ?></p>
                 <?php
                 break;
         }
