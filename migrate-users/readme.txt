@@ -7,11 +7,11 @@ Tested up to: 4.9.1
 Stable tag: 1.0.1
 License: GPLv2 or later
 
-Migrate Users helps to migrate users from any system to your Wordpress website in few clicks
+Plugin helps to migrate users from any system to your Wordpress website in few clicks
 
 == Description ==
 
-Migrate Users helps to migrate users from any system to your Wordpress website in few clicks
+Plugin helps to migrate users from any system to your Wordpress website in few clicks
 
 Features:
 - import file format is .csv
